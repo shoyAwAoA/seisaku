@@ -69,7 +69,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>d3d11.lib;dxgi.lib;xinput.lib;xaudio2.lib;winmm.lib;Effekseer.lib;EffekseerRendererDX11.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\2230166\Desktop\ゲームプログラミングⅢ・Ⅳ（配布）\ゲームプログラミングⅢ・Ⅳ\External\Effekseer170b\lib\vs2019\MT\x64\Debug;.\External.\Effekseer170b.\lib.\vs2019.\MT.\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>.\External.\Effekseer170b.\lib.\vs2019.\MT.\x64.\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <FxCompile>
       <ShaderModel>5.0</ShaderModel>
@@ -99,7 +99,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>d3d11.lib;dxgi.lib;xinput.lib;xaudio2.lib;winmm.lib;Effekseer.lib;EffekseerRendererDX11.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\2230166\Desktop\ゲームプログラミングⅢ・Ⅳ（配布）\ゲームプログラミングⅢ・Ⅳ\External\Effekseer170b\lib\vs2019\MT\x64\Debug;.\External.\Effekseer170b.\lib.\vs2019.\MT.\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>.\External.\Effekseer170b.\lib.\vs2019.\MT.\x64.\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <FxCompile>
       <ShaderModel>5.0</ShaderModel>

@@ -6,6 +6,8 @@
 #include"ProjectileManager.h"
 #include"Effect.h"
 
+
+
 class Player :public Character
 {
 public:
@@ -154,6 +156,7 @@ private:
 
 private:
     Model* model = nullptr;
+   /* Model* modelTe = nullptr;*/
     ProjectileManager projectileManager;
     float moveSpeed = 5.0f;
     float turnSpeed = DirectX::XMConvertToRadians(720);
@@ -165,3 +168,9 @@ private:
     float  leftHandRadius = 0.6f;
     bool attackCollisionFlag = false;
 };
+
+//class te:public Player
+//{
+//    te();
+//    ~te()override {};
+//};

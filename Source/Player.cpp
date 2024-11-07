@@ -27,6 +27,7 @@ Player::Player()
 
     //model = new Model("Data/Model/Mr.Incredible/Mr.Incredible.mdl");
     model = new Model("Data/Model/Jammo/Jammo.mdl");
+   /* modelTe = new Model("Data/Model/te/te.mdl");*/
     //model->PlayAnimation(0);
     scale.x = scale.y = scale.z = 0.01f;
 
@@ -44,7 +45,7 @@ Player::~Player()
         model = nullptr;
 
     }
-    
+  
     delete hitEffect;
 }
 //更新処理
@@ -161,9 +162,11 @@ void Player::Update(float elapsedTime)
 
     //モデルアニメーション更新処理
     model->UpdateAnimetion(elapsedTime);
+    //modelTe->UpdateAnimetion(elapsedTime);
 
     //モデル行列更新
     model->UpdateTransform(transform);
+   
 }
 //描画処理
 void Player::Render(ID3D11DeviceContext* dc, Shader* sharder)

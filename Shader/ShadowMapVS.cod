@@ -59,12 +59,12 @@ dcl_temps 5
 //   v2.x <- boneIndices.x; v2.y <- boneIndices.y; v2.z <- boneIndices.z; v2.w <- boneIndices.w; 
 //   o0.x <- <main return value>.x; o0.y <- <main return value>.y; o0.z <- <main return value>.z; o0.w <- <main return value>.w
 //
-#line 14 "C:\Users\2230166\Desktop\せいさく\HLSL\ShadowMapVS.hlsl"
+#line 14 "C:\Users\2230057\OneDrive - yamaguchigakuen\ドキュメンチEチEクトップ\せいさく\HLSL\ShadowMapVS.hlsl"
 nop 
 mov r0.xyzw, v0.xyzw
 ftou r1.xyzw, v2.xyzw
 
-#line 27 "C:\Users\2230166\Desktop\せいさく\HLSL\Lambert.hlsli"
+#line 27 "C:\Users\2230057\OneDrive - yamaguchigakuen\ドキュメント\デスクトップ\せいさく\HLSL\Lambert.hlsli"
 itof r2.xyzw, l(0, 0, 0, 0)  // r2.x <- p.x; r2.y <- p.y; r2.z <- p.z; r2.w <- p.w
 
 #line 32
@@ -112,7 +112,7 @@ add r0.xyzw, r0.xyzw, r2.xyzw  // r0.x <- p.x; r0.y <- p.y; r0.z <- p.z; r0.w <-
 #line 34
 mov r0.xyzw, r0.xyzw  // r0.x <- <LambertPosition return value>.x; r0.y <- <LambertPosition return value>.y; r0.z <- <LambertPosition return value>.z; r0.w <- <LambertPosition return value>.w
 
-#line 14 "C:\Users\2230166\Desktop\せいさく\HLSL\ShadowMapVS.hlsl"
+#line 14 "C:\Users\2230057\OneDrive - yamaguchigakuen\ドキュメンチEチEクトップ\せいさく\HLSL\ShadowMapVS.hlsl"
 mov r0.xyzw, r0.xyzw  // r0.x <- position.x; r0.y <- position.y; r0.z <- position.z; r0.w <- position.w
 
 #line 16
