@@ -9,6 +9,7 @@
 #include"StageManager.h"
 #include"StageMain.h"
 #include"StageMoveFloor.h"
+#include"kakapo.h"
 
 // 初期化
 void SceneGame::Initialize()
@@ -67,6 +68,8 @@ void SceneGame::Initialize()
 		slime->SetTerritory(slime->GetPosition(), 10.0f);
 		enemyManager.Register(slime);
 	}
+	kakapo* kakapoo = new kakapo();
+
 #endif
 }
 
@@ -125,6 +128,8 @@ void SceneGame::Update(float elapsedTime)
 
 	//エフェクト更新処理
 	EffectManager::Instance().Update(elapsedTime);
+
+
 }
 
 // 描画処理
