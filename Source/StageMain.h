@@ -3,6 +3,7 @@
 //#include "Graphics/Shader.h"
 #include"Graphics/Model.h"
 #include"Stage.h"
+#include"kakapo.h"
 //#include"Collision.h"
 
 ////ステージ

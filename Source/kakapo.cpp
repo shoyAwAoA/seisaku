@@ -3,6 +3,7 @@
 kakapo::kakapo()
 {
     model = new Model("Data/Model/me/me.mdl");
+
 }
 
 kakapo::~kakapo()
