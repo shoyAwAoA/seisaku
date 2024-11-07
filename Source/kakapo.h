@@ -3,18 +3,14 @@
 #include"Graphics/Model.h"
 #include"Graphics/Shader.h"
 #include"Stage.h"
+#include"Character.h"
 
 
-class kakapo
+class kakapo:public Character
 {
 public:
 
-    //唯一のインスタンス取得
-    static kakapo& Instance()
-    {
-        static kakapo instance;
-        return instance;
-    }
+    static kakapo& Instance();
 
     kakapo();
     ~kakapo();

@@ -1,7 +1,18 @@
 #include "kakapo.h"
 
+static kakapo* instance = nullptr;
+
+
+kakapo& kakapo::Instance()
+{
+
+    return *instance;
+}
+
 kakapo::kakapo()
 {
+    instance = this;
+
     model = new Model("Data/Model/me/me.mdl");
 
 }

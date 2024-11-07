@@ -9,7 +9,6 @@
 #include"StageManager.h"
 #include"StageMain.h"
 #include"StageMoveFloor.h"
-#include"kakapo.h"
 
 // 初期化
 void SceneGame::Initialize()
@@ -25,6 +24,8 @@ void SceneGame::Initialize()
 	//stageManager.Register(stageMoveFloor);
 
 	player = new Player();
+
+	kaka = new kakapo();
 
 	//ゲージスプライト
 	guage = new Sprite();
@@ -90,6 +91,12 @@ void SceneGame::Finalize()
 		player = nullptr;
 	}
 
+	if (kaka != nullptr)
+	{
+		delete kaka;
+		kaka = nullptr;
+	}
+
 	//ゲージスプライト終了化
 	if (guage != nullptr)
 	{
@@ -123,6 +130,8 @@ void SceneGame::Update(float elapsedTime)
 	StageManager::Instance().Update(elapsedTime);
 
 	player->Update(elapsedTime);
+
+	kaka->Update(elapsedTime);
 
 	//エネミー更新処理
 	EnemyManager::Instance().Update(elapsedTime);
@@ -186,8 +195,8 @@ void SceneGame::Render()
 		//ステージ描画
 		//stage->Render(dc, shader);
 		StageManager::Instance().Render(dc, shader);
-		kaka.Instance().Render(dc, shader);
 		player->Render(dc, shader);
+		kaka.Render(dc, shader);
 
 		//エネミー描画
 		EnemyManager::Instance().Render(dc, shader);
