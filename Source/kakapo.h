@@ -2,11 +2,16 @@
 
 #include"Graphics/Model.h"
 #include"Graphics/Shader.h"
+#include"Stage.h"
+#include"Character.h"
 
 
-class kakapo
+class kakapo:public Character
 {
 public:
+
+    static kakapo& Instance();
+
     kakapo();
     ~kakapo();
 

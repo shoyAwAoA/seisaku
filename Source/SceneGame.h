@@ -4,6 +4,7 @@
 #include"CameraController.h"
 #include"Scene.h"
 #include"Graphics/Sprite.h"
+#include"kakapo.h"
 
 
 // ÉQÅ[ÉÄÉVÅ[Éì
@@ -43,6 +44,8 @@ private:
 private:
 	//Stage* stage = nullptr;
 	Player* player = nullptr;
+	kakapo* kaka = nullptr;
+
 	CameraController* cameraController = nullptr;
 	Sprite* guage = nullptr;
 	

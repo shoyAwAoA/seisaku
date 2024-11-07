@@ -48,6 +48,7 @@ StageMain::StageMain()
 {
     //ステージモデルを読み込み
     model = new Model("Data/Model/ExampleStage/ExampleStage.mdl");
+
 }
 
 //デストラクタ

@@ -9,7 +9,6 @@
 #include"StageManager.h"
 #include"StageMain.h"
 #include"StageMoveFloor.h"
-#include"kakapo.h"
 
 // 初期化
 void SceneGame::Initialize()
@@ -25,6 +24,8 @@ void SceneGame::Initialize()
 	//stageManager.Register(stageMoveFloor);
 
 	player = new Player();
+
+	kaka = new kakapo();
 
 	//ゲージスプライト
 	guage = new Sprite();
@@ -68,7 +69,8 @@ void SceneGame::Initialize()
 		slime->SetTerritory(slime->GetPosition(), 10.0f);
 		enemyManager.Register(slime);
 	}
-	kakapo* kakapoo = new kakapo();
+
+
 
 #endif
 }
@@ -87,6 +89,12 @@ void SceneGame::Finalize()
 	{
 		delete player;
 		player = nullptr;
+	}
+
+	if (kaka != nullptr)
+	{
+		delete kaka;
+		kaka = nullptr;
 	}
 
 	//ゲージスプライト終了化
@@ -123,6 +131,8 @@ void SceneGame::Update(float elapsedTime)
 
 	player->Update(elapsedTime);
 
+	kaka->Update(elapsedTime);
+
 	//エネミー更新処理
 	EnemyManager::Instance().Update(elapsedTime);
 
@@ -139,6 +149,7 @@ void SceneGame::Render()
 	ID3D11DeviceContext* dc = graphics.GetDeviceContext();
 	ID3D11RenderTargetView* rtv = graphics.GetRenderTargetView();
 	ID3D11DepthStencilView* dsv = graphics.GetDepthStencilView();
+	kakapo& kaka = kakapo::Instance();
 
 	// 画面クリア＆レンダーターゲット設定
 	FLOAT color[] = { 0.0f, 0.0f, 0.5f, 1.0f };	// RGBA(0.0～1.0)
@@ -185,6 +196,7 @@ void SceneGame::Render()
 		//stage->Render(dc, shader);
 		StageManager::Instance().Render(dc, shader);
 		player->Render(dc, shader);
+		kaka.Render(dc, shader);
 
 		//エネミー描画
 		EnemyManager::Instance().Render(dc, shader);
@@ -222,6 +234,8 @@ void SceneGame::Render()
 		//プレイヤーデバッグ描画
 		player->DrawDebugGUI();
 	}
+
+
 }
 
 //エネミーHPゲージ描画
